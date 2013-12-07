@@ -12,8 +12,9 @@ Repository
 class HumanRepoImpl : HumanRepo{
     override fun listHumans() =
         arrayListOf(
-            Human("John Doe", 78),
-            Human("Andrey Breslav", 35),
-            Human("James Gosling", 58)
+                Human("Bjarne Stroustrup", 63),
+                Human("James Gosling"    , 58),
+                Human("Martin Odersky"   , 53),
+                Human("Andrey Breslav"   , 29)
         )
 }
