@@ -10,7 +10,7 @@ ComponentScan(basePackages = array("humantalks"))
 open class WebConfig : WebMvcConfigurerAdapter(){
 
     /**
-     * On active le DefaultServletHandler pour une utilisation angular,...
+     * DefaultServletHandler enabled for static resources (angular, css, ...)
      */
     override fun configureDefaultServletHandling(
             configurer: DefaultServletHandlerConfigurer?) {
