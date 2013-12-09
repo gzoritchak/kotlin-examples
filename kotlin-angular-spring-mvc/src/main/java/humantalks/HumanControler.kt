@@ -16,8 +16,6 @@ public class HumanController() {
     fun listHumans(RequestParam(required=false) ageMax:Int?)=
             humanRepo!!
                 .listHumans()
-                    .filter { it.age < ageMax ?: MAX_AGE}
-                    .sortBy { it.age }
-                    .reverse()
+                    .filter { it.age == null || it.age!! < ageMax ?: MAX_AGE}
 
 }
