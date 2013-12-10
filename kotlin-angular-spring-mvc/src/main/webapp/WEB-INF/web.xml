@@ -1,9 +1,13 @@
 <web-app version="2.4"
 	xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
-	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	http://java.sun.com/xml/ns/j2ee/web-app_2_5.xsd">
 
 	<display-name>Human resfull app</display-name>
+    <context-param>
+        <param-name>spring.profiles.default</param-name>
+        <param-value>memory</param-value>
+    </context-param>
 
     <servlet>
 		<servlet-name>mvc-dispatcher</servlet-name>
@@ -16,7 +20,7 @@
         </init-param>
         <init-param>
             <param-name>contextConfigLocation</param-name>
-            <param-value>humantalks.WebConfig</param-value>
+            <param-value>humantalks.configs.WebConfig</param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
 	</servlet>

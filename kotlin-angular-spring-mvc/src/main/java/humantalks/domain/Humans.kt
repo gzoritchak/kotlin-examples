@@ -1,4 +1,4 @@
-package humantalks
+package humantalks.domain
 
 import javax.persistence.*
 import javax.inject.*
@@ -26,7 +26,19 @@ trait HumanRepo {
 }
 
 Named
-class HumanRepoImpl : HumanRepo{
+class MemoryHumanRepoImpl : HumanRepo{
+
+    override fun listHumans():List<Human> =
+        arrayListOf(
+                human("Bjarne Stroustrup", 63),
+                human("James Gosling"    , 58),
+                human("Martin Odersky"   , 53),
+                human("Andrey Breslav"   , 29)
+        )
+}
+
+Named
+class JPAHumanRepoImpl : HumanRepo{
 
     Inject var emf:EntityManagerFactory? = null
 
